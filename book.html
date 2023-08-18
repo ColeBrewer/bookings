@@ -57,16 +57,16 @@
 
     <form>
         <label class="labelfname" for="fname">First Name:</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
         <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
         <label class="labelemail" for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="JoeBloggs@gmail.com...  " >
+        <input type="email" id="email" name="email" placeholder="JoeBloggs@gmail.com...  " required>
 
         <label class="labelnumber" for="number">Phone Number</label>
-        <input type="text" id="number" name="number" placeholder="+64 020 4975 446..." >
+        <input type="text" id="number" name="number" placeholder="+64 020 4975 446..." required>
 
 
         <label for="facility">Facility:</label>
@@ -82,23 +82,23 @@
         <br>
         <br>
         <label class="stime" for="stime">Time Start:</label>
-        <input type="datetime-local" id="stime" name="stime" placeholder="Time" >
+        <input type="datetime-local" id="stime" name="stime" placeholder="Time" required>
 
         <label for="etime">Time End:</label>
-        <input type="datetime-local" id="etime" name="etime" placeholder="Time" >
+        <input type="datetime-local" id="etime" name="etime" placeholder="Time" required>
 
         <label for="comments">Extra Comments:</label>
-        <input type="text" id="comments" name="comments" placeholder="Specifically Gym 2..." >
+        <input type="text" id="comments" name="comments" placeholder="Specifically Gym 2...">
         <br>
-        
-        
+
+
     </form>
 
-    <div id="submit">          
-        <input class="submit" type="submit" value="Submit Booking" onclick="sendEmail()"></input>
+    <div id="submit">
+        <input class="submit" type="submit" value="Submit Booking" onclick="sendingEmail(this)"></input>
     </div>
-    
 
+    <button>TEST</button>
 
     <iframe class="calendar"
         src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Pacific%2FAuckland&mode=WEEK&showTitle=0&src=OWNicmV3ZXJAaGJocy5zY2hvb2wubno&src=aGJocy5zY2hvb2wubnpfZ3E5aDhhOHN2dWsxaGMyaGlsZGwxNmM2NzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%23F4511E"
@@ -107,8 +107,25 @@
     <footer>Chur</footer>
 
 
+
+
+
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("VJtD_OWMWszDMtkyW");
+        })();
+    </script>
+
+
+
+
+
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 
