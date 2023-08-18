@@ -49,21 +49,37 @@ function sendingEmail(ele) {
   }
 
 
+  Email.send({  /* Emails currently sending from my school email to my home email to prove functioning,
+                   If stakeholder chooses to use this I will put in his email information and make a new email specifcally for sending bookings*/
+
+    Host: "smtp.gmail.com",
+    Username: "9cbrewer@hbhs.school.nz",
+    Password: "hyper3cum",
+    To: 'cole.brewerton@gmail.com',
+    From: "9cbrewer@hbhs.school.nz",
+    Subject: "New Facility Booking",
+    Body: document.getElementById(fname) +
+      document.getElementById(lname) +
+      document.getElementById(email) +
+      document.getElementById(number) +
+      document.getElementById(facility) +
+      document.getElementById(stime) +
+      document.getElementById(etime) +
+      document.getElementById(comments),
+
+    emailjs.send('service_4rp61kq', 'template_7mh46q8', emailContents)
+      .then(function () {
+        alert("Booking Submitted - Under Review")
+      })
 
 
-  emailjs.send('service_4rp61kq', 'template_7mh46q8', emailContents)
-    .then(function () {
-      alert("Booking Submitted - Under Review")
-    })
 
 
 
 
 
 
-
-
-}
+  }
 
 
 
