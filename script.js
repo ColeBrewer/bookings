@@ -34,7 +34,6 @@ function sendEmail() {
      
     Host: "smtp.gmail.com",
     Username: "9cbrewer@hbhs.school.nz",
-    Password: "hyper3cum",
     To: 'cole.brewerton@gmail.com', 
     From: "9cbrewer@hbhs.school.nz",
     Subject: "New Facility Booking",
