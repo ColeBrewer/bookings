@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Webpage for bookings">
+    <meta name="author" content="Cole Brewerton">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HBHS Facilities Booking</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+
+
+    <link rel="icon" href="images/Flavicon- Resized.png">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <img class="logo" src="images/output-onlinepngtools (1).png">
+            <h1> HBHS Facilities Booking</h1>
+
+            <ul>
+                <li class="dropdown">
+                    <a href="index.html" class="dropbtn">Home</a>
+                    <div class="dropdown-content">
+                        <a href="index.html" onclick="navLink(1)">Pool</a>
+                        <a href="index.html" onclick="navLink(2)">Gym</a>
+                        <a href="index.html" onclick="navLink(3)">Fields</a>
+                        <a href="index.html" onclick="navLink(4)">Hall</a>
+                        <a href="index.html" onclick="navLink(5)">Turf</a>
+                    </div>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="book.html">Book</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 class="bookingtitle">Book Using PDF's:</h2>
+    <h2 class="bookinginfo">Email Submit To: smccarthy@hbhs.school.nz</h2>
+    <a href="pdf/bookingform.pdf" target="_blank"><button class="bform">Booking Form</button></a>
+    <a href="pdf/poolbookingform.pdf" target="_blank"><button class="pform">Pool Booking Form</button></a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2 class="bookingtitle">Book Using Website:</h2>
+
+    <br>
+    <br>
+
+    <form>
+        <label class="labelfname" for="fname">First Name:</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." >
+
+        <label class="labelemail" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="JoeBloggs@gmail.com...  " >
+
+        <label class="labelnumber" for="number">Phone Number</label>
+        <input type="text" id="number" name="number" placeholder="+64 020 4975 446..." >
+
+
+        <label for="facility">Facility:</label>
+
+        <select id="facility" name="facility">
+            <option value="Pool">Pool</option>
+            <option value="Field">Field</option>
+            <option value="Turf">Turf</option>
+            <option value="Gym">Gym</option>
+            <option value="Hall">Hall</option>
+        </select>
+
+        <br>
+        <br>
+        <label class="stime" for="stime">Time Start:</label>
+        <input type="datetime-local" id="stime" name="stime" placeholder="Time" >
+
+        <label for="etime">Time End:</label>
+        <input type="datetime-local" id="etime" name="etime" placeholder="Time" >
+
+        <label for="comments">Extra Comments:</label>
+        <input type="text" id="comments" name="comments" placeholder="Specifically Gym 2..." >
+        <br>
+        
+        
+    </form>
+
+    <div id="submit">          
+        <input class="submit" type="submit" value="Submit Booking" onclick="sendEmail()"></input>
+    </div>
+    
+
+
+    <iframe class="calendar"
+        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Pacific%2FAuckland&mode=WEEK&showTitle=0&src=OWNicmV3ZXJAaGJocy5zY2hvb2wubno&src=aGJocy5zY2hvb2wubnpfZ3E5aDhhOHN2dWsxaGMyaGlsZGwxNmM2NzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23039BE5&color=%23F4511E"
+        style="border:0" width="90%" height="800" frameborder="0" scrolling="no"></iframe>
+
+    <footer>Chur</footer>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+</body>
+
+
+
+
+</html>

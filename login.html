@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Webpage for bookings">
+  <meta name="author" content="Cole Brewerton">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBHS Facilities Booking</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap" rel="stylesheet">
+
+
+  <link rel="icon" href="images/Flavicon- Resized.png">
+</head>
+
+
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="images/output-onlinepngtools (1).png">
+      <h1> HBHS Facilities Booking</h1>
+
+      <ul>
+        <li class="dropdown">
+          <a href="index.html" class="dropbtn">Home</a>
+          <div class="dropdown-content">
+            <a href="index.html" onclick="navLink(1)">Pool</a>
+            <a href="index.html" onclick="navLink(2)">Gym</a>
+            <a href="index.html" onclick="navLink(3)">Fields</a>
+            <a href="index.html" onclick="navLink(4)">Hall</a>
+            <a href="index.html" onclick="navLink(5)">Turf</a>
+          </div>
+        </li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="book.html">Book</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <div id="content">
+
+    <div id="logoContainer">
+      <img class="loginbig" src="./images/login image.png">
+    </div>
+    <div id="inputs">
+      <div id="usernameContainer">
+        <input class="input" type="text" id="Username" name="Username" placeholder="Username">
+      </div>
+
+      <div id="passwordContainer">
+        <input class="input" type="password" id="Password" name="Password" placeholder="Password">
+      </div>
+
+      <div id="signInContainer">
+        <a href="book.html">
+          <button class="input" id="signIn" name="sign in">Sign In</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script src="script.js"></script>
+</body>
+
+
+
+
+</html>
