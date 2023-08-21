@@ -30,20 +30,6 @@ function showSlides(n) {
 
 function sendingEmail(ele) {
 
-  if (document.getElementById("fname") = null, document.getElementById("lname") = null)
-    then(
-      alert("Please Fill Out Required Fields")
-    )
-  else (
-    emailjs.send('service_4rp61kq', 'template_7mh46q8', emailContents)
-      .then(function () {
-        alert("Booking Submitted - Under Review")
-      })
-  )
-
-
-
-
   let emailContents = {
 
     fromMessage:
@@ -60,14 +46,10 @@ function sendingEmail(ele) {
 
   }
 
-
-
-
-
-
-
-
-
+  emailjs.send('service_4rp61kq', 'template_7mh46q8', emailContents)
+    .then(function () {
+      alert("Booking Submitted - Under Review")
+    })
 
 
 
