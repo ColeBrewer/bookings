@@ -30,7 +30,9 @@ function showSlides(n) {
 
 function sendingEmail(ele) {
 
-  if (document.getElementById("fname") = null, document.getElementById("lname") = null)
+
+  let x = document.getElementById("fname").value
+  if (x == "")
     then(
       alert("Please Fill Out Required Fields")
     )
