@@ -33,9 +33,9 @@ function sendingEmail(ele) {
 
   let x = document.getElementById("fname").value
   if (x == "")
-    then(
+    then(function () {
       alert("Please Fill Out Required Fields")
-    )
+    })
   else (
     emailjs.send('service_4rp61kq', 'template_7mh46q8', emailContents)
       .then(function () {
