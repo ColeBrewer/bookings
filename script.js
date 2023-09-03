@@ -39,20 +39,38 @@ function sendingEmail(ele) {
       "Phone Number: " + document.getElementById("number").value + '\n' +
       "Facility: " + document.getElementById("facility").value + '\n' +
       "Starting Time: " + document.getElementById('stime').value + '\n' +
-      "Ending Time: " + document.getElementById("etime").value + '\n' +
+      "Booking Length: " + document.getElementById("length").value + '\n' +
       "Comments: " + document.getElementById("comments").value,
 
     email: document.getElementById("email").value
 
   }
 
-  emailjs.send('service_4rp61kq', 'template_7mh46q8', emailContents)
-    .then(function () {
-      alert("Booking Submitted - Under Review")
-    })
+  let x = document.getElementById("fname").value;
+  let y = document.getElementById("lname").value;
+  let z = document.getElementById("email").value;
+  let a = document.getElementById("number").value;
+  let b = document.getElementById('stime').value;
+  let c = document.getElementById("length").value;
 
+  if (x == "" || y == "" || z == "" || a == "" || b == "" || c == "") {
+    alert("Please ensure you have filled out all fields, excluding Comments");
+  }
+  else {
 
+    emailjs.send('service_4rp61kq', 'template_7mh46q8', emailContents)
+      .then(function () {
+        alert("Booking Submitted - Under Review")
+      })
+
+  }
 }
+
+
+
+
+
+
 
 
 
